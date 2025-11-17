@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat0x0 Server Domain</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            padding: 40px; 
+            text-align: center; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 90%;
+        }
+        .domain { 
+            font-size: 28px; 
+            color: #fff; 
+            margin: 25px 0; 
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            word-break: break-all;
+        }
+        .timestamp { 
+            color: rgba(255, 255, 255, 0.8); 
+            font-size: 14px; 
+            margin-top: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #fff;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 Chat0x0 Server</h1>
+        <p>Текущий адрес сервера для подключения:</p>
+        <div class="domain">
+            https://admin.localhost.run
+        </div>
+        <a href="https://admin.localhost.run" class="btn" target="_blank">📱 Перейти к серверу</a>
+        <p>Скопируйте ссылку выше для подключения к мессенджеру</p>
+        <div class="timestamp">
+            🔄 Автообновлено: 2025-11-17 17:41:07
+        </div>
+    </div>
+    
+    <script>
+        // Автоматическое перенаправление для клиентов
+        setTimeout(function() {
+            window.location.href = "https://admin.localhost.run";
+        }, 3000);
+        
+        // Копирование в буфер обмена при клике
+        document.addEventListener('DOMContentLoaded', function() {
+            const domainElement = document.querySelector('.domain');
+            domainElement.addEventListener('click', function() {
+                navigator.clipboard.writeText('https://admin.localhost.run').then(function() {
+                    alert('Ссылка скопирована в буфер обмена!');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
